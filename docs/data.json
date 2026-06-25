@@ -1,5 +1,1350 @@
 {
-  "generated_at": "2026-06-25T19:14:09.756709+00:00",
-  "count": 0,
-  "events": []
+  "generated_at": "2026-06-25T19:22:05.026451+00:00",
+  "count": 48,
+  "events": [
+    {
+      "pair_id": 12,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: Both Teams to Score",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.405,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.4,
+        0.41
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.405,
+      "net_spread": 0.39258319999999997,
+      "est_edge_usd": 39.25832,
+      "confidence": 0.35881271958351135,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 139241.0641969998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x8e7be77b89451cf53862d6f92bfb06d952286f3dec0a31dd1710f411cf4be2f2",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 5,
+      "title_pm": "Japan vs. Sweden: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.555,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.55,
+        0.56
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.555,
+      "net_spread": 0.5422592,
+      "est_edge_usd": 54.22592,
+      "confidence": 0.3568226099014282,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 160387.40912999996,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x7c37bb4c2dbd430d4f69d7c7df7f98f8b30774f9b110401bc6f6d19e7789334e",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 6,
+      "title_pm": "Japan vs. Sweden: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Germany,yes Japan,yes Over 1.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.555,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.55,
+        0.56
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.555,
+      "net_spread": 0.5422592,
+      "est_edge_usd": 54.22592,
+      "confidence": 0.35367628931999207,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 160387.40912999996,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x7c37bb4c2dbd430d4f69d7c7df7f98f8b30774f9b110401bc6f6d19e7789334e",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20263EA252FEF69-52C222F5087",
+      "spread_history": []
+    },
+    {
+      "pair_id": 43,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: Cura\u00e7ao O/U 0.5",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.435,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.43,
+        0.44
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.435,
+      "net_spread": 0.4222592,
+      "est_edge_usd": 42.22592,
+      "confidence": 0.34371522068977356,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 57002.13651800001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xb3e7d2d11ee57a36df47921033fa5ad4cd69d115f797a5b2df038d0b838a1ade",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 7,
+      "title_pm": "Japan vs. Sweden: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Sweden,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.555,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.55,
+        0.56
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.555,
+      "net_spread": 0.5422592,
+      "est_edge_usd": 54.22592,
+      "confidence": 0.33606523275375366,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 160387.40912999996,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x7c37bb4c2dbd430d4f69d7c7df7f98f8b30774f9b110401bc6f6d19e7789334e",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-B1E2C5C1BEA",
+      "spread_history": []
+    },
+    {
+      "pair_id": 13,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Australia,yes Netherlands,yes USA,yes Cape Verde,yes Egypt,yes France,yes Belgium,yes Senegal",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.405,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.4,
+        0.41
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.405,
+      "net_spread": 0.39258319999999997,
+      "est_edge_usd": 39.25832,
+      "confidence": 0.33407217264175415,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 139241.0641969998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x8e7be77b89451cf53862d6f92bfb06d952286f3dec0a31dd1710f411cf4be2f2",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5579F4D719-C270667A5DB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 37,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: 1st Half O/U 1.5",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.455,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.45,
+        0.46
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.455,
+      "net_spread": 0.44211520000000004,
+      "est_edge_usd": 44.21152000000001,
+      "confidence": 0.3281457722187042,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 61935.192452,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x52f862402bd728ba70c128a6efdabdfccfdccc6cca5be1ddcf34be4e52f4dfbb",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 26,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: O/U 4.5",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.255,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.25,
+        0.26
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.255,
+      "net_spread": 0.2461472,
+      "est_edge_usd": 24.614720000000002,
+      "confidence": 0.32553568482398987,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 91701.98622300001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x850552f50936ab5538988b385803dbe3f8ed3d266b836fc588e618f2df40189d",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 14,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Netherlands,yes Cape Verde wins by more than 1.5 goals,yes France wins by more than 2.5 goals,yes Senegal wins by more than 1.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.405,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.4,
+        0.41
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.405,
+      "net_spread": 0.39258319999999997,
+      "est_edge_usd": 39.25832,
+      "confidence": 0.3254169821739197,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 139241.0641969998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x8e7be77b89451cf53862d6f92bfb06d952286f3dec0a31dd1710f411cf4be2f2",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A7885D7BEF0-E1912884915",
+      "spread_history": []
+    },
+    {
+      "pair_id": 1,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: O/U 3.5",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.455,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.45,
+        0.46
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.455,
+      "net_spread": 0.44211520000000004,
+      "est_edge_usd": 44.21152000000001,
+      "confidence": 0.32495900988578796,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 1243494.8155979977,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xed716b8f1c6b88b85eec26a59ea13c56a93607703d5d7ae43d7a1057f4d96d7c",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 8,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: O/U 2.5",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.665,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.66,
+        0.67
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.665,
+      "net_spread": 0.6540808,
+      "est_edge_usd": 65.40808,
+      "confidence": 0.32422560453414917,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 157437.078659,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x70de9477cf371879e4f7792efa3ca1b651978051da5b595eaf28c799043fe6c1",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 45,
+      "title_pm": "Exact Score: Cura\u00e7ao 3 - 1 C\u00f4te d'Ivoire?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.0055,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.004,
+        0.007
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.0055,
+      "net_spread": 0.006499528,
+      "est_edge_usd": 0.6499528,
+      "confidence": 0.32400116324424744,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 56844.43372,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xeeee9b57ecd643a472e74480594a5216716eb2c1f42c2e571fe242fe8dae7c14",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 47,
+      "title_pm": "Exact Score: Cura\u00e7ao 0 - 0 C\u00f4te d'Ivoire?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.0385,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.038,
+        0.039
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.0385,
+      "net_spread": 0.036301512,
+      "est_edge_usd": 3.6301512000000002,
+      "confidence": 0.32384443283081055,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 56080.14182899999,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xf395e5da715a57606e3dd2663d2df330a0d6255101ab539964d49fbf045498c3",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 28,
+      "title_pm": "Exact Score: Cura\u00e7ao 0 - 2 C\u00f4te d'Ivoire?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.145,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.14,
+        0.15
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.145,
+      "net_spread": 0.14082,
+      "est_edge_usd": 14.082,
+      "confidence": 0.3236348330974579,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 87083.952519,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x6884f93ef62e473e095c22f3083725ba3cdcb00b4adb907d58e1897ab6ed8ed0",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 21,
+      "title_pm": "Exact Score: Cura\u00e7ao 0 - 3 C\u00f4te d'Ivoire?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.135,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.13,
+        0.14
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.135,
+      "net_spread": 0.1313312,
+      "est_edge_usd": 13.133120000000002,
+      "confidence": 0.3235389292240143,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 96620.18457500008,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x5a8f5fcdca382cdf41428dc64926b27e550e02708d548a18b5509cdc1361d56c",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 30,
+      "title_pm": "Ecuador vs. Germany: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Germany,yes Paraguay,yes Netherlands,yes USA,yes Over 1.5 goals scored,yes Over 2.5 goals scored,yes Over 2.5 goals scored",
+      "category": "fifwc-ecu-ger-2026-06-25-more-markets",
+      "pm_mid": 0.555,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.55,
+        0.56
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.555,
+      "net_spread": 0.5422592,
+      "est_edge_usd": 54.22592,
+      "confidence": 0.32067710161209106,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 82983.56685699981,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xb48be20317b77cbe8d900e1835da95b731c51c21cce21c8fbb5a1586de0dd6e4",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026BD26F61FD79-FE0205374FA",
+      "spread_history": []
+    },
+    {
+      "pair_id": 40,
+      "title_pm": "Exact Score: Cura\u00e7ao 3 - 2 C\u00f4te d'Ivoire?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.0065,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.006,
+        0.007
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.0065,
+      "net_spread": 0.006499528,
+      "est_edge_usd": 0.6499528,
+      "confidence": 0.3203037679195404,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 57535.749994000005,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x011fe1492a09461bdf1ef851b9baf9f6742f2ea413e2be857e35db135c6846eb",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 25,
+      "title_pm": "Exact Score: Cura\u00e7ao 3 - 3 C\u00f4te d'Ivoire?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.0055,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.005,
+        0.006
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.0055,
+      "net_spread": 0.005570592,
+      "est_edge_usd": 0.5570592,
+      "confidence": 0.31971338391304016,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 92645.814864,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x73ed1902fe0f9e780c8abdb1799b8cbc4af8782686fd74a4699f212b01a889ab",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 44,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: Cura\u00e7ao O/U 0.5",
+      "title_kalshi": "yes Curacao,yes Paraguay,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.435,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.43,
+        0.44
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.435,
+      "net_spread": 0.4222592,
+      "est_edge_usd": 42.22592,
+      "confidence": 0.3171539306640625,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 57002.13651800001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xb3e7d2d11ee57a36df47921033fa5ad4cd69d115f797a5b2df038d0b838a1ade",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026DA5E49043BB-352509C4B13",
+      "spread_history": []
+    },
+    {
+      "pair_id": 9,
+      "title_pm": "T\u00fcrkiye vs. United States: O/U 5.5",
+      "title_kalshi": "yes Turkiye wins 1st Half,yes Over 1.5 1H goals scored,yes Over 2.5 1H goals scored,yes Over 1.5 1H goals scored,yes Both Teams To Score,yes Germany,yes Over 1.5 goals scored",
+      "category": "fifwc-tur-usa-2026-06-25-more-markets",
+      "pm_mid": 0.085,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.08,
+        0.09
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.085,
+      "net_spread": 0.0841032,
+      "est_edge_usd": 8.41032,
+      "confidence": 0.31528571248054504,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 154807.32270699998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x10312b76609d2993fa69f27b037075b461b2ff7983911ec34c01a8a2f5c4d345",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202640C18A646DB-ACC65101C8B",
+      "spread_history": []
+    },
+    {
+      "pair_id": 10,
+      "title_pm": "T\u00fcrkiye vs. United States: O/U 5.5",
+      "title_kalshi": "yes Turkiye wins 1st Half,yes Over 1.5 1H goals scored,yes Over 2.5 1H goals scored,yes Over 1.5 1H goals scored,yes Both Teams To Score,yes Germany,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-tur-usa-2026-06-25-more-markets",
+      "pm_mid": 0.085,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.08,
+        0.09
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.085,
+      "net_spread": 0.0841032,
+      "est_edge_usd": 8.41032,
+      "confidence": 0.3150632977485657,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 154807.32270699998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x10312b76609d2993fa69f27b037075b461b2ff7983911ec34c01a8a2f5c4d345",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026AE8534DB195-F6A629B9E23",
+      "spread_history": []
+    },
+    {
+      "pair_id": 34,
+      "title_pm": "Paraguay vs. Australia: O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Germany,yes Paraguay,yes Netherlands,yes USA,yes Over 1.5 goals scored,yes Over 2.5 goals scored,yes Over 2.5 goals scored",
+      "category": "fifwc-par-aus-2026-06-25-more-markets",
+      "pm_mid": 0.575,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.57,
+        0.58
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.575,
+      "net_spread": 0.5624608,
+      "est_edge_usd": 56.24608,
+      "confidence": 0.3144225478172302,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 62880.84120700001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x4c9b5ee73c4eb7c4a4757a0a722a9b7d10547732d10db6b0285e44042e39dd00",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026BD26F61FD79-FE0205374FA",
+      "spread_history": []
+    },
+    {
+      "pair_id": 17,
+      "title_pm": "T\u00fcrkiye vs. United States: O/U 2.5",
+      "title_kalshi": "yes Turkiye wins 1st Half,yes Over 1.5 1H goals scored,yes Over 2.5 1H goals scored,yes Over 1.5 1H goals scored,yes Both Teams To Score,yes Germany,yes Over 1.5 goals scored",
+      "category": "fifwc-tur-usa-2026-06-25-more-markets",
+      "pm_mid": 0.615,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.61,
+        0.62
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.615,
+      "net_spread": 0.6030368,
+      "est_edge_usd": 60.30368000000001,
+      "confidence": 0.31164878606796265,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 134550.17636700004,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x695915526d635c2cdd411dd315313c691d329bd6a92b62f56686a33146d13186",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202640C18A646DB-ACC65101C8B",
+      "spread_history": []
+    },
+    {
+      "pair_id": 35,
+      "title_pm": "Paraguay vs. Australia: O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Japan,yes Paraguay,yes Netherlands,yes USA,yes Over 2.5 goals scored,yes Over 1.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-par-aus-2026-06-25-more-markets",
+      "pm_mid": 0.575,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.57,
+        0.58
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.575,
+      "net_spread": 0.5624608,
+      "est_edge_usd": 56.24608,
+      "confidence": 0.3113693594932556,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 62880.84120700001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x4c9b5ee73c4eb7c4a4757a0a722a9b7d10547732d10db6b0285e44042e39dd00",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026FA85BFBA5F8-597A727BC30",
+      "spread_history": []
+    },
+    {
+      "pair_id": 18,
+      "title_pm": "T\u00fcrkiye vs. United States: O/U 2.5",
+      "title_kalshi": "yes Turkiye wins 1st Half,yes Over 1.5 1H goals scored,yes Over 2.5 1H goals scored,yes Over 1.5 1H goals scored,yes Both Teams To Score,yes Germany,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-tur-usa-2026-06-25-more-markets",
+      "pm_mid": 0.615,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.61,
+        0.62
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.615,
+      "net_spread": 0.6030368,
+      "est_edge_usd": 60.30368000000001,
+      "confidence": 0.311307817697525,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 134550.17636700004,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x695915526d635c2cdd411dd315313c691d329bd6a92b62f56686a33146d13186",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026AE8534DB195-F6A629B9E23",
+      "spread_history": []
+    },
+    {
+      "pair_id": 41,
+      "title_pm": "Exact Score: T\u00fcrkiye 0 - 2 United States?",
+      "title_kalshi": "yes Turkiye wins 1st Half,yes Over 1.5 1H goals scored,yes Over 2.5 1H goals scored,yes Over 1.5 1H goals scored,yes Both Teams To Score,yes Germany,yes Over 1.5 goals scored",
+      "category": "fifwc-tur-usa-2026-06-25-exact-score",
+      "pm_mid": 0.085,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.08,
+        0.09
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.085,
+      "net_spread": 0.0841032,
+      "est_edge_usd": 8.41032,
+      "confidence": 0.3107561767101288,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 57348.360397,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xa3651d18cff7e84716240558a74ca10f476bc8805a0d203830605dadaea8af6d",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S202640C18A646DB-ACC65101C8B",
+      "spread_history": []
+    },
+    {
+      "pair_id": 42,
+      "title_pm": "Exact Score: T\u00fcrkiye 0 - 2 United States?",
+      "title_kalshi": "yes Turkiye wins 1st Half,yes Over 1.5 1H goals scored,yes Over 2.5 1H goals scored,yes Over 1.5 1H goals scored,yes Both Teams To Score,yes Germany,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-tur-usa-2026-06-25-exact-score",
+      "pm_mid": 0.085,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.08,
+        0.09
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.085,
+      "net_spread": 0.0841032,
+      "est_edge_usd": 8.41032,
+      "confidence": 0.31011414527893066,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 57348.360397,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xa3651d18cff7e84716240558a74ca10f476bc8805a0d203830605dadaea8af6d",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026AE8534DB195-F6A629B9E23",
+      "spread_history": []
+    },
+    {
+      "pair_id": 15,
+      "title_pm": "Japan vs. Sweden: Japan O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Germany,yes Japan,yes Over 1.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.475,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.47,
+        0.48
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.475,
+      "net_spread": 0.46202879999999996,
+      "est_edge_usd": 46.20287999999999,
+      "confidence": 0.30985504388809204,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 137700.871679,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xf00145d9654730cc9688393d5d2366f35c5bd7f7bdcde0b5315dfec2b936444e",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20263EA252FEF69-52C222F5087",
+      "spread_history": []
+    },
+    {
+      "pair_id": 32,
+      "title_pm": "Japan vs. Sweden: Japan O/U 2.5",
+      "title_kalshi": "yes Both Teams To Score,yes Germany,yes Japan,yes Over 1.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.215,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.21,
+        0.22
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.215,
+      "net_spread": 0.2076448,
+      "est_edge_usd": 20.76448,
+      "confidence": 0.30956384539604187,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 75210.92423299998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x028e18e6c1c617d794b7ff3507eb6c279d50e976566b75db532c0175cd2b7712",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20263EA252FEF69-52C222F5087",
+      "spread_history": []
+    },
+    {
+      "pair_id": 4,
+      "title_pm": "Will Cura\u00e7ao vs. C\u00f4te d'Ivoire end in a draw?",
+      "title_kalshi": "no Curacao wins the 1H by more than 1.5 goals,no Ivory Coast wins by more than 2.5 goals,yes Germany wins by more than 2.5 goals",
+      "category": "fifwc-kor-civ-2026-06-25",
+      "pm_mid": 0.1185,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.118,
+        0.119
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.1185,
+      "net_spread": 0.11145159199999999,
+      "est_edge_usd": 11.145159199999998,
+      "confidence": 0.3090035021305084,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 416931.7541190001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x9a07caaff2c446ef13f2ef28c15e788cbf52be21aec37178aa26927952fb32f4",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026230FA66594B-D2D39FC6F61",
+      "spread_history": []
+    },
+    {
+      "pair_id": 31,
+      "title_pm": "Ecuador vs. Germany: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Sweden,yes Paraguay,yes Netherlands,yes USA,yes Over 2.5 goals scored",
+      "category": "fifwc-ecu-ger-2026-06-25-more-markets",
+      "pm_mid": 0.555,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.55,
+        0.56
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.555,
+      "net_spread": 0.5422592,
+      "est_edge_usd": 54.22592,
+      "confidence": 0.30784669518470764,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 82983.56685699981,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xb48be20317b77cbe8d900e1835da95b731c51c21cce21c8fbb5a1586de0dd6e4",
+      "link_kalshi": "https://kalshi.com/markets/KXMVECROSSCATEGORY-S202662997E42606-E7E8ECB97D5",
+      "spread_history": []
+    },
+    {
+      "pair_id": 36,
+      "title_pm": "Paraguay vs. Australia: O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Sweden,yes Paraguay,yes Netherlands,yes USA,yes Over 2.5 goals scored",
+      "category": "fifwc-par-aus-2026-06-25-more-markets",
+      "pm_mid": 0.575,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.57,
+        0.58
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.575,
+      "net_spread": 0.5624608,
+      "est_edge_usd": 56.24608,
+      "confidence": 0.3072587549686432,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 62880.84120700001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-26T02:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x4c9b5ee73c4eb7c4a4757a0a722a9b7d10547732d10db6b0285e44042e39dd00",
+      "link_kalshi": "https://kalshi.com/markets/KXMVECROSSCATEGORY-S202662997E42606-E7E8ECB97D5",
+      "spread_history": []
+    },
+    {
+      "pair_id": 33,
+      "title_pm": "Japan vs. Sweden: Japan O/U 2.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.215,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.21,
+        0.22
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.215,
+      "net_spread": 0.2076448,
+      "est_edge_usd": 20.76448,
+      "confidence": 0.3071741759777069,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 75210.92423299998,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x028e18e6c1c617d794b7ff3507eb6c279d50e976566b75db532c0175cd2b7712",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 3,
+      "title_pm": "Japan vs. Sweden: O/U 2.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.495,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.49,
+        0.5
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.495,
+      "net_spread": 0.482,
+      "est_edge_usd": 48.199999999999996,
+      "confidence": 0.30604320764541626,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 870058.9184680019,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xc3b9ac6f43d878b96c1e6819fe45858920b4ab3d61fdf104ceb78c9813787698",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 23,
+      "title_pm": "Japan vs. Sweden: O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.755,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.75,
+        0.76
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.755,
+      "net_spread": 0.7468672000000001,
+      "est_edge_usd": 74.68672000000001,
+      "confidence": 0.3057137429714203,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 94193.209215,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x0167879c2b764c835e06d78a4ef878ac40c72cf79fb05b66e86d516d0eea11bd",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 16,
+      "title_pm": "Japan vs. Sweden: Japan O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.475,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.47,
+        0.48
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.475,
+      "net_spread": 0.46202879999999996,
+      "est_edge_usd": 46.20287999999999,
+      "confidence": 0.30504167079925537,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 137700.871679,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xf00145d9654730cc9688393d5d2366f35c5bd7f7bdcde0b5315dfec2b936444e",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 11,
+      "title_pm": "Spread: Ecuador (-1.5)",
+      "title_kalshi": "yes Ecuador,yes Uruguay,yes Tie",
+      "category": "fifwc-ecu-ger-2026-06-25-more-markets",
+      "pm_mid": 0.065,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.06,
+        0.07
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.065,
+      "net_spread": 0.0653128,
+      "est_edge_usd": 6.531280000000001,
+      "confidence": 0.3042014241218567,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 150398.54304299995,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x85959f9f1d190d2ca5545ed29ce442ea6a32895ac74f5bd4a72357a77b6bf4d4",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20265E915C2BF47-AD4B7D26803",
+      "spread_history": []
+    },
+    {
+      "pair_id": 19,
+      "title_pm": "Japan vs. Sweden: O/U 3.5",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.285,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.28,
+        0.29
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.285,
+      "net_spread": 0.2751752,
+      "est_edge_usd": 27.51752,
+      "confidence": 0.30345624685287476,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 125450.04292300002,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x255bd44ab944b139b8bba5881b1e47ae80cd5922ec31ecb498e388885f56f35e",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 20,
+      "title_pm": "Exact Score: Japan 2 - 1 Sweden?",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-exact-score",
+      "pm_mid": 0.095,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.09,
+        0.1
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.095,
+      "net_spread": 0.09352,
+      "est_edge_usd": 9.352,
+      "confidence": 0.302742063999176,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 119272.72347899973,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x1dc0c22aaba77565c8c787b6028bd175dde64bc1111cd0988a440f8b3f1d0415",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 48,
+      "title_pm": "Exact Score: Cura\u00e7ao 0 - 0 C\u00f4te d'Ivoire?",
+      "title_kalshi": "yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Australia,yes Netherlands,yes USA,yes Cape Verde,yes Egypt,yes France,yes Belgium,yes Senegal",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.0385,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.038,
+        0.039
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.0385,
+      "net_spread": 0.036301512,
+      "est_edge_usd": 3.6301512000000002,
+      "confidence": 0.3021208941936493,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 56080.14182899999,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xf395e5da715a57606e3dd2663d2df330a0d6255101ab539964d49fbf045498c3",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5579F4D719-C270667A5DB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 39,
+      "title_pm": "Exact Score: Any Other Score?",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Both Teams To Score,yes Japan,yes USA,yes Netherlands wins by more than 2.5 goals",
+      "category": "fifwc-jpn-swe-2026-06-25-exact-score",
+      "pm_mid": 0.135,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.13,
+        0.14
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.135,
+      "net_spread": 0.1313312,
+      "est_edge_usd": 13.133120000000002,
+      "confidence": 0.30157291889190674,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 58015.81705200003,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x62bc6e6e2663fb33583fc6369880cd6c27a6a4e3d7048b63b4ec6bb4791ddf22",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20267D6361389A4-8577A7125BB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 2,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: O/U 3.5",
+      "title_kalshi": "yes Curacao,yes Paraguay,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.455,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.45,
+        0.46
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.455,
+      "net_spread": 0.44211520000000004,
+      "est_edge_usd": 44.21152000000001,
+      "confidence": 0.3014754354953766,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 1243494.8155979977,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xed716b8f1c6b88b85eec26a59ea13c56a93607703d5d7ae43d7a1057f4d96d7c",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026DA5E49043BB-352509C4B13",
+      "spread_history": []
+    },
+    {
+      "pair_id": 38,
+      "title_pm": "Spread: Cura\u00e7ao (-1.5)",
+      "title_kalshi": "yes Curacao,yes Paraguay,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.017,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.016,
+        0.018
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.017,
+      "net_spread": 0.016727328,
+      "est_edge_usd": 1.6727328,
+      "confidence": 0.3014652729034424,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 59339.003948,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x3d902c11cbf7e4f7f68721b4832b9539922ef9ef5aa584921fa68d1934cb833c",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026DA5E49043BB-352509C4B13",
+      "spread_history": []
+    },
+    {
+      "pair_id": 29,
+      "title_pm": "Exact Score: Cura\u00e7ao 0 - 2 C\u00f4te d'Ivoire?",
+      "title_kalshi": "yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Australia,yes Netherlands,yes USA,yes Cape Verde,yes Egypt,yes France,yes Belgium,yes Senegal",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.145,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.14,
+        0.15
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.145,
+      "net_spread": 0.14082,
+      "est_edge_usd": 14.082,
+      "confidence": 0.3013967275619507,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 87083.952519,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x6884f93ef62e473e095c22f3083725ba3cdcb00b4adb907d58e1897ab6ed8ed0",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5579F4D719-C270667A5DB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 22,
+      "title_pm": "Exact Score: Cura\u00e7ao 0 - 3 C\u00f4te d'Ivoire?",
+      "title_kalshi": "yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Australia,yes Netherlands,yes USA,yes Cape Verde,yes Egypt,yes France,yes Belgium,yes Senegal",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.135,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.13,
+        0.14
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.135,
+      "net_spread": 0.1313312,
+      "est_edge_usd": 13.133120000000002,
+      "confidence": 0.3008538484573364,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 96620.18457500008,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x5a8f5fcdca382cdf41428dc64926b27e550e02708d548a18b5509cdc1361d56c",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5579F4D719-C270667A5DB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 24,
+      "title_pm": "Japan vs. Sweden: O/U 1.5",
+      "title_kalshi": "yes Both Teams To Score,yes Germany,yes Japan,yes Over 1.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-jpn-swe-2026-06-25-more-markets",
+      "pm_mid": 0.755,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.75,
+        0.76
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.755,
+      "net_spread": 0.7468672000000001,
+      "est_edge_usd": 74.68672000000001,
+      "confidence": 0.30057141184806824,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 94193.209215,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T23:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x0167879c2b764c835e06d78a4ef878ac40c72cf79fb05b66e86d516d0eea11bd",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S20263EA252FEF69-52C222F5087",
+      "spread_history": []
+    },
+    {
+      "pair_id": 46,
+      "title_pm": "Exact Score: Cura\u00e7ao 3 - 1 C\u00f4te d'Ivoire?",
+      "title_kalshi": "yes Both Teams To Score,yes Ivory Coast,yes Germany,yes Australia,yes Netherlands,yes USA,yes Cape Verde,yes Egypt,yes France,yes Belgium,yes Senegal",
+      "category": "fifwc-kor-civ-2026-06-25-exact-score",
+      "pm_mid": 0.0055,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.004,
+        0.007
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.0055,
+      "net_spread": 0.006499528,
+      "est_edge_usd": 0.6499528,
+      "confidence": 0.3005489408969879,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 56844.43372,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0xeeee9b57ecd643a472e74480594a5216716eb2c1f42c2e571fe242fe8dae7c14",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026A5579F4D719-C270667A5DB",
+      "spread_history": []
+    },
+    {
+      "pair_id": 27,
+      "title_pm": "Cura\u00e7ao vs. C\u00f4te d'Ivoire: O/U 4.5",
+      "title_kalshi": "yes Curacao,yes Paraguay,no Over 3.5 goals scored,yes Over 1.5 goals scored",
+      "category": "fifwc-kor-civ-2026-06-25-more-markets",
+      "pm_mid": 0.255,
+      "kalshi_mid": 0.0,
+      "pm_bidask": [
+        0.25,
+        0.26
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.0
+      ],
+      "gross_spread": 0.255,
+      "net_spread": 0.2461472,
+      "est_edge_usd": 24.614720000000002,
+      "confidence": 0.30035609006881714,
+      "inverted": false,
+      "resolution_warning": true,
+      "volume_pm": 91701.98622300001,
+      "volume_kalshi": NaN,
+      "end_date": "2026-06-25T20:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x850552f50936ab5538988b385803dbe3f8ed3d266b836fc588e618f2df40189d",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026DA5E49043BB-352509C4B13",
+      "spread_history": []
+    }
+  ]
 }
