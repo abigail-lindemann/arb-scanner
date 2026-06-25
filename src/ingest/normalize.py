@@ -128,13 +128,13 @@ def normalize_pm_market(market: dict[str, Any]) -> dict[str, Any] | None:
 def normalize_kalshi_market(market: dict[str, Any]) -> dict[str, Any] | None:
     """One unified row from a Kalshi market. None if unusable."""
     title = market.get("title")
-    yes_bid = market.get("yes_bid")
-    yes_ask = market.get("yes_ask")
+    yes_bid = market.get("yes_bid_dollars") or market.get("yes_bid")
+    yes_ask = market.get("yes_ask_dollars") or market.get("yes_ask")
     if title is None or yes_bid is None or yes_ask is None:
         return None
-    prob_bid = yes_bid / 100.0
-    prob_ask = yes_ask / 100.0
-    prob_mid = (yes_bid + yes_ask) / 2.0 / 100.0
+    prob_bid = float(yes_bid)
+    prob_ask = float(yes_ask)
+    prob_mid = (float(yes_bid) + float(yes_ask)) / 2.0
     raw_cat = market.get("category") or market.get("series_ticker")
     return {
         "platform": "kalshi",
