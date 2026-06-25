@@ -82,17 +82,21 @@ Cost: hosting is free; AI is ~$2–3/month (Haiku, with alignment caching).
 The daily briefing shows P&L and news for whatever holdings are in the
 portfolio table. Use the interactive CLI to manage them:
 
-bashexport DATABASE_URL="postgresql://..."   # your Neon connection string
+```bash
+export DATABASE_URL="postgresql://..."   # your Neon connection string
 python portfolio_manager.py
 
+```
 At the prompt:
 
+```bash
 portfolio> list                     # show all current holdings
 portfolio> add AAPL 10 150.00       # add 10 shares of AAPL at $150 avg cost
 portfolio> add NVDA 5 420.00        # add another holding
 portfolio> remove AAPL              # remove a holding
 portfolio> quit
 
+```
 
 add is idempotent: running it again on the same ticker updates shares and
 avg cost rather than duplicating the row.
