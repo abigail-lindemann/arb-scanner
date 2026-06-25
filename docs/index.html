@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Arb Scanner — Polymarket × Kalshi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>ARB&nbsp;SCANNER<span class="blink">_</span></h1>
+  <span class="meta" id="meta">loading…</span>
+  <nav>
+    <a href="index.html" class="active">Scanner</a>
+    <a href="track-record.html">Track record</a>
+  </nav>
+</header>
+
+<main>
+  <div class="filters">
+    <label>Category
+      <select id="f-category"><option value="">all</option></select>
+    </label>
+    <label>Min net spread
+      <select id="f-net">
+        <option value="0">0%</option>
+        <option value="0.02">2%</option>
+        <option value="0.05" selected>5%</option>
+        <option value="0.08">8%</option>
+      </select>
+    </label>
+    <label>Min liquidity
+      <input id="f-liq" type="number" value="0" min="0" step="1000" style="width:90px" />
+    </label>
+    <label>Min confidence
+      <select id="f-conf">
+        <option value="0">any</option>
+        <option value="0.6">0.60</option>
+        <option value="0.8" selected>0.80</option>
+      </select>
+    </label>
+    <label class="toggle"><input id="f-warn" type="checkbox" /> hide resolution mismatches</label>
+  </div>
+
+  <div class="layout">
+    <section class="panel">
+      <h2>Agreement scatter — distance from the diagonal = edge</h2>
+      <div class="body"><div id="scatter-wrap"><canvas id="scatter"></canvas></div></div>
+    </section>
+    <section class="panel">
+      <h2>Detail</h2>
+      <div class="body" id="kpi"><p class="kpi-empty">Click a point or a table row to inspect a matched pair.</p></div>
+    </section>
+  </div>
+
+  <div class="tables">
+    <section class="panel"><h2>Best net ROI</h2><div class="body"><table id="t-roi"></table></div></section>
+    <section class="panel"><h2>Most likely to converge</h2><div class="body"><table id="t-converge"></table></div></section>
+    <section class="panel"><h2>Highest confidence</h2><div class="body"><table id="t-conf"></table></div></section>
+  </div>
+</main>
+
+<footer>
+  Informational only — computed signals net of conservative taker fees, not financial advice.
+  Net spread = gross gap − fees on both legs. Acting on a signal is a separate manual decision.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

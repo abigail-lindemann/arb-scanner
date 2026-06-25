@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Track record — Arb Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <h1>TRACK&nbsp;RECORD<span class="blink">_</span></h1>
+  <span class="meta" id="meta">loading…</span>
+  <nav>
+    <a href="index.html">Scanner</a>
+    <a href="track-record.html" class="active">Track record</a>
+  </nav>
+</header>
+
+<main>
+  <div class="cards" id="cards"></div>
+
+  <div class="layout">
+    <section class="panel">
+      <h2>By category</h2>
+      <div class="body"><table id="t-cat"></table></div>
+    </section>
+    <section class="panel">
+      <h2>By confidence</h2>
+      <div class="body"><table id="t-conf"></table></div>
+    </section>
+  </div>
+
+  <div class="layout">
+    <section class="panel">
+      <h2>Days to converge</h2>
+      <div class="body"><div style="height:300px;position:relative"><canvas id="hist"></canvas></div></div>
+    </section>
+    <section class="panel">
+      <h2>Signal status (all signals counted — H11)</h2>
+      <div class="body"><table id="t-status"></table></div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  Every flagged signal is scored here, including expired and failed ones — they are
+  never dropped from the record. Buckets with small samples are labelled; treat
+  those rates as indicative only. Informational, not financial advice.
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const SMALL = 10; // H11: below this, a bucket is labelled small-sample.
+const pct = (x) => x == null ? "n/a" : (x * 100).toFixed(1) + "%";
+const num = (x) => x == null ? "n/a" : (+x).toFixed(2);
+
+function sampleTag(n) {
+  return n < SMALL ? ` <span class="small-sample">small sample (n=${n})</span>` : "";
+}
+
+function card(label, value, sub) {
+  return `<div class="card"><div class="label">${label}</div>
+    <div class="value">${value}</div><div class="sub">${sub || ""}</div></div>`;
+}
+
+function metricRow(name, m) {
+  return `<tr>
+    <td>${name}${sampleTag(m.n)}</td>
+    <td class="num">${m.n}</td>
+    <td class="num pos">${pct(m.hit_rate)}</td>
+    <td class="num">${m.median_days_to_converge == null ? "n/a" : (+m.median_days_to_converge).toFixed(1)}</td>
+    <td class="num">${pct(m.match_quality)}</td>
+    <td class="num">${pct(m.avg_captured_spread)}</td>
+  </tr>`;
+}
+
+function metricTable(el, obj) {
+  const head = `<tr><th>bucket</th><th class="num">n</th><th class="num">hit</th>
+    <th class="num">med d</th><th class="num">match q</th><th class="num">capt</th></tr>`;
+  const rows = Object.entries(obj).map(([k, m]) => metricRow(k, m)).join("");
+  el.innerHTML = head + (rows || `<tr><td colspan="6" class="cat">no data yet</td></tr>`);
+}
+
+(async function () {
+  let d;
+  try {
+    d = await (await fetch("track-record.json", { cache: "no-store" })).json();
+  } catch (e) {
+    document.getElementById("meta").textContent = "no track-record.json yet — run the analytics step";
+    return;
+  }
+  document.getElementById("meta").textContent =
+    "generated " + (d.generated_at || "").replace("T", " ").slice(0, 16);
+
+  const o = d.overall || {};
+  document.getElementById("cards").innerHTML =
+    card("Signals", o.n ?? 0, "flagged & tracked") +
+    card("Hit rate", pct(o.hit_rate), `${o.resolved ?? 0} resolved` + (o.n < SMALL ? " · small sample" : "")) +
+    card("Median days", o.median_days_to_converge == null ? "n/a" : (+o.median_days_to_converge).toFixed(1), "to converge") +
+    card("Match quality", pct(o.match_quality), "outcome-consistent");
+
+  metricTable(document.getElementById("t-cat"), d.by_category || {});
+  metricTable(document.getElementById("t-conf"), d.by_confidence || {});
+
+  // status counts — expired/failed always visible (H11)
+  const sc = d.status_counts || {};
+  document.getElementById("t-status").innerHTML =
+    `<tr><th>status</th><th class="num">count</th></tr>` +
+    (Object.keys(sc).length
+      ? Object.entries(sc).map(([k, v]) =>
+          `<tr><td>${k}</td><td class="num">${v}</td></tr>`).join("")
+      : `<tr><td colspan="2" class="cat">no data yet</td></tr>`);
+
+  // histogram
+  const hist = d.days_to_converge_histogram || [];
+  const labels = hist.map((b) => b.to == null ? `${b.from}+` : `${b.from}-${b.to}`);
+  new Chart(document.getElementById("hist"), {
+    type: "bar",
+    data: { labels, datasets: [{ data: hist.map((b) => b.count),
+      backgroundColor: "rgba(0,255,156,0.55)", borderColor: "#00ff9c", borderWidth: 1 }] },
+    options: {
+      plugins: { legend: { display: false } },
+      scales: {
+        x: { grid: { color: "#1b2429" }, ticks: { color: "#7c8c86" },
+             title: { display: true, text: "days", color: "#7c8c86" } },
+        y: { grid: { color: "#1b2429" }, ticks: { color: "#7c8c86" }, beginAtZero: true },
+      },
+    },
+  });
+})();
+</script>
+</body>
+</html>
