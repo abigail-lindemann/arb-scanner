@@ -136,3 +136,72 @@ def recent_spread_history(
         rows = cur.fetchall()
     # reverse so oldest is first (chronological for the sparkline)
     return [{"ts": row[0].isoformat(), "net": row[1]} for row in reversed(rows)]
+
+
+def upsert_matched_pair(
+    conn,
+    pm_market_id: str,
+    kalshi_market_id: str,
+    embedding_sim: float,
+    outcome_map,
+    inverted: bool,
+    resolution_match_score: float,
+    same_event: bool,
+    confidence: float,
+    ts,
+) -> None:
+    sql = """
+        INSERT INTO matched_pairs
+            (pm_market_id, kalshi_market_id, embedding_sim, outcome_map,
+             inverted, resolution_match_score, same_event, confidence,
+             created_at, last_seen)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+        ON CONFLICT (pm_market_id, kalshi_market_id) DO UPDATE SET
+            embedding_sim = EXCLUDED.embedding_sim,
+            outcome_map = EXCLUDED.outcome_map,
+            inverted = EXCLUDED.inverted,
+            resolution_match_score = EXCLUDED.resolution_match_score,
+            same_event = EXCLUDED.same_event,
+            confidence = EXCLUDED.confidence,
+            last_seen = EXCLUDED.last_seen
+    """
+    with conn.cursor() as cur:
+        cur.execute(sql, (
+            pm_market_id, kalshi_market_id, embedding_sim,
+            json.dumps(outcome_map) if outcome_map is not None else None,
+            inverted, resolution_match_score, same_event, confidence,
+            ts, ts,
+        ))
+    conn.commit()
+
+
+def load_cached_pair_keys(conn) -> set:
+    with conn.cursor() as cur:
+        cur.execute("SELECT pm_market_id, kalshi_market_id FROM matched_pairs")
+        return {(row[0], row[1]) for row in cur.fetchall()}
+
+
+def load_matched_pairs(conn) -> list:
+    with conn.cursor() as cur:
+        cur.execute("""
+            SELECT id, pm_market_id, kalshi_market_id, embedding_sim,
+                   outcome_map, inverted, resolution_match_score,
+                   same_event, confidence, created_at, last_seen
+            FROM matched_pairs
+            ORDER BY confidence DESC
+        """)
+        cols = [d[0] for d in cur.description]
+        return [dict(zip(cols, row)) for row in cur.fetchall()]
+
+
+def recent_spread_history(conn, pair_id: int, limit: int = 30) -> list:
+    with conn.cursor() as cur:
+        cur.execute("""
+            SELECT ts, net_spread
+            FROM spread_snapshots
+            WHERE pair_id = %s
+            ORDER BY ts DESC
+            LIMIT %s
+        """, (pair_id, limit))
+        rows = cur.fetchall()
+    return [{"ts": row[0].isoformat(), "net": row[1]} for row in reversed(rows)]
