@@ -184,7 +184,11 @@ def build_unified(
         except Exception as e:
             log.warning("normalize Kalshi market failed: %s", e)
     df = pd.DataFrame(rows, columns=UNIFIED_COLUMNS)
-    log.info("Unified DataFrame: %s rows (pm+kalshi)", len(df))
+    pm_n = int((df["platform"] == "polymarket").sum())
+    ks_n = int((df["platform"] == "kalshi").sum())
+    log.info("Unified DataFrame: %s rows (pm=%s, kalshi=%s)", len(df), pm_n, ks_n)
+    if pm_n == 0 or ks_n == 0:
+        log.error("ONE-SIDED FEED: pm=%s kalshi=%s — no cross-platform pairs possible", pm_n, ks_n)
     return df
 
 
