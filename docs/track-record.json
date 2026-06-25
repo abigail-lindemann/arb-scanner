@@ -1,0 +1,47 @@
+{
+  "generated_at": "2026-06-25T14:12:57.792116+00:00",
+  "overall": {
+    "n": 0,
+    "hit_rate": null,
+    "median_days_to_converge": null,
+    "resolved": 0,
+    "match_quality": null,
+    "avg_captured_spread": null,
+    "avg_realized_close": null
+  },
+  "by_category": {},
+  "by_confidence": {},
+  "status_counts": {},
+  "days_to_converge_histogram": [
+    {
+      "from": 0,
+      "to": 1,
+      "count": 0
+    },
+    {
+      "from": 1,
+      "to": 3,
+      "count": 0
+    },
+    {
+      "from": 3,
+      "to": 7,
+      "count": 0
+    },
+    {
+      "from": 7,
+      "to": 14,
+      "count": 0
+    },
+    {
+      "from": 14,
+      "to": 30,
+      "count": 0
+    },
+    {
+      "from": 30,
+      "to": null,
+      "count": 0
+    }
+  ]
+}
