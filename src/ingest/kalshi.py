@@ -71,6 +71,6 @@ def fetch_markets(top_n: int = 300) -> list[dict[str, Any]]:
         cursor = data.get("cursor")
         if not cursor or not markets:
             break
-    out.sort(key=lambda m: m.get("volume_24h") or 0, reverse=True)
+    out.sort(key=lambda m: float(m.get("volume_24h_fp") or m.get("volume_24h") or 0), reverse=True)
     log.info("Kalshi: fetched %s markets, keeping top %s", len(out), top_n)
     return out[:top_n]
