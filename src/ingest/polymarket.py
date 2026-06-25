@@ -94,7 +94,7 @@ def parse_outcome_prices(market: dict[str, Any]) -> list[tuple[str, float]]:
             return []
         return [(str(lbl), float(p)) for lbl, p in zip(labels, prices)]
     except (ValueError, TypeError) as e:
-        log.debug("bad outcome prices for %s: %s", market.get("id"), e)
+        log.warning("PM parse drop %s: outcomes=%r prices=%r", market.get("id"), market.get("outcomes"), market.get("outcomePrices"))
         return []
 
 
