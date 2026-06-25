@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Methodology — Arb Scanner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+<style>
+  /* Scoped prose styling — layers on top of style.css, overrides nothing global. */
+  .prose { line-height: 1.65; max-width: 70ch; }
+  .prose p { margin: 0 0 14px; }
+  .prose h3 { color: #00ff9c; font-weight: 600; margin: 26px 0 10px; font-size: 1rem; }
+  .prose h3:first-child { margin-top: 4px; }
+  .prose ul, .prose ol { margin: 0 0 14px; padding-left: 22px; }
+  .prose li { margin: 0 0 7px; }
+  .prose code { background: #1b2429; padding: 1px 5px; border-radius: 3px; font-size: 0.92em; color: #cfe8df; }
+  .prose .muted { color: #7c8c86; }
+  .prose .pos { color: #00ff9c; }
+  .prose a { color: #00ff9c; }
+
+  /* Numbered step chips for the "how to read it" section. */
+  .steps { list-style: none; padding: 0; counter-reset: step; }
+  .steps > li { position: relative; padding-left: 38px; margin-bottom: 16px; }
+  .steps > li::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; left: 0; top: -1px; width: 24px; height: 24px;
+    display: grid; place-items: center; border-radius: 50%;
+    background: #1b2429; color: #00ff9c; border: 1px solid #2a3a36;
+    font-size: 0.8rem; font-weight: 600;
+  }
+
+  /* Callout for the honesty / not-advice notes. */
+  .note {
+    border-left: 2px solid #00ff9c; background: rgba(0,255,156,0.05);
+    padding: 10px 14px; margin: 14px 0; border-radius: 0 4px 4px 0;
+  }
+  .note.warn { border-left-color: #ffd24a; background: rgba(255,210,74,0.06); }
+
+  /* Small legend swatches matching the scatter color logic in app.js. */
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 10px 0 4px; }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; color: #7c8c86; font-size: 0.9rem; }
+  .legend i { width: 13px; height: 13px; border-radius: 50%; display: inline-block; }
+
+  /* Inline formula block. */
+  .formula {
+    background: #1b2429; border: 1px solid #243029; border-radius: 4px;
+    padding: 12px 14px; margin: 6px 0 16px; color: #cfe8df; overflow-x: auto;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>ARB&nbsp;SCANNER<span class="blink">_</span></h1>
+  <span class="meta">methodology &amp; usage</span>
+  <nav>
+    <a href="index.html">Scanner</a>
+    <a href="track-record.html">Track record</a>
+    <a href="methodology.html" class="active">Methodology</a>
+  </nav>
+</header>
+
+<main>
+  <section class="panel">
+    <h2>What this tool does</h2>
+    <div class="body prose">
+      <p>
+        A few times a day it pulls the most active markets from
+        <strong>Polymarket</strong> and <strong>Kalshi</strong>, figures out which markets on
+        each platform are betting on the <em>same</em> real-world event, and flags where the two
+        platforms disagree on the odds by more than <span class="pos">5%</span> <em>after fees</em>.
+      </p>
+      <div class="note warn">
+        Informational only. The tool never places a trade and never touches money. A flagged
+        signal is an observation, not a recommendation — acting on one is a separate, manual
+        decision you make yourself. This is not financial advice.
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>How to read the scanner</h2>
+    <div class="body prose">
+      <ol class="steps">
+        <li>
+          <strong>The scatter is the picture.</strong> Each point is one matched pair: its
+          Polymarket probability on the x-axis, its Kalshi probability (inversion-adjusted) on the
+          y-axis. The dashed diagonal is perfect agreement. <em>Distance from the diagonal is the
+          edge</em> — points hugging the line mean the platforms agree; points far from it mean
+          they disagree.
+        </li>
+        <li>
+          <strong>Color encodes the gap.</strong>
+          <div class="legend">
+            <span><i style="background:#00ff9c"></i> on the line — agreement</span>
+            <span><i style="background:#ff5a3c"></i> far off — large gap</span>
+            <span><i style="background:#ffd24a"></i> resolution mismatch warning</span>
+          </div>
+        </li>
+        <li>
+          <strong>Click anything to inspect it.</strong> Click a point or a table row to open the
+          detail card: both prices (mid and bid/ask), gross and net spread, the dollar edge at a
+          $100 position, volume on each side, confidence, end date, links to both markets, and a
+          small spread-over-time sparkline.
+        </li>
+        <li>
+          <strong>Three ranked tables.</strong> <em>Best net ROI</em> sorts by net spread.
+          <em>Most likely to converge</em> sorts by recent spread velocity for now (it switches to
+          the convergence model once enough history exists). <em>Highest confidence</em> sorts by
+          match confidence.
+        </li>
+        <li>
+          <strong>Filters narrow the view.</strong> Category, minimum net spread, minimum
+          liquidity, minimum confidence, and a toggle to hide resolution mismatches. A sensible
+          starting point: net spread ≥ 5%, confidence ≥ 0.80, mismatches hidden.
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>How a signal is computed</h2>
+    <div class="body prose">
+      <h3>1 · Ingestion</h3>
+      <p>
+        Public market data from both platforms is normalized into one schema — same fields, same
+        units — so a Polymarket market and a Kalshi market can be compared directly.
+      </p>
+
+      <h3>2 · Matching</h3>
+      <p>
+        Deciding that two differently-worded questions are the same event is the hard part and the
+        main place a tool like this goes wrong. Matching runs in stages: sentence embeddings
+        (<code>all-MiniLM-L6-v2</code>) find candidate pairs by meaning, then a Claude alignment
+        agent confirms each pair, aligns the outcomes, and returns a <strong>confidence</strong>
+        score. We'd rather show 20 matches you can trust than 100 with junk mixed in, so
+        low-confidence matches are flagged separately.
+      </p>
+      <p>
+        <strong>Inversion is handled explicitly.</strong> If Polymarket-Yes corresponds to
+        Kalshi-No, the comparison uses <code>1 − kalshi</code> so the diagonal still means
+        agreement. Inverted pairs are badged as such.
+      </p>
+
+      <h3>3 · Spread</h3>
+      <p>Two prices do two different jobs:</p>
+      <ul>
+        <li><strong>Midpoint</strong> drives the scatter — a clean "do they agree?" picture.</li>
+        <li><strong>Executable bid/ask</strong> drives the actionable net spread in the tables,
+          because real arbitrage means paying to cross the spread on both legs.</li>
+      </ul>
+      <div class="formula">
+        gross_spread = |pm_prob − kalshi_aligned|<br />
+        net_spread&nbsp;&nbsp; = gross_spread − pm_fee − kalshi_fee
+      </div>
+
+      <h3>4 · Fees</h3>
+      <p>
+        A raw 6% gap can vanish entirely after fees — and both platforms charge the most exactly
+        where gaps look most tempting (near 50/50 odds). Fees peak at <code>p = 0.5</code> and
+        taper toward the extremes. Polymarket fees scale by market <em>category</em> (crypto is the
+        priciest, geopolitics is free); Kalshi follows a probability curve peaking near
+        <span class="muted">~1.75%</span>. We assume the worst realistic case —
+        <strong>taker fees on both legs</strong> — so the tool never overstates an opportunity.
+      </p>
+      <div class="note warn">
+        The fee curves are validated approximations, not guarantees. Treat the net edge as a strong
+        estimate. Limit orders ("maker") pay zero fees on both platforms, so the real edge can be
+        better than shown.
+      </div>
+
+      <h3>5 · Opportunity threshold</h3>
+      <p>
+        A pair is flagged as an opportunity when <strong>net_spread ≥ 5%</strong>. The detail card
+        illustrates the dollar edge at a standard <strong>$100</strong> position:
+        <code>est_edge_usd = net_spread × 100</code>. A resolution-mismatch warning attaches when
+        the two markets may not resolve on identical criteria.
+      </p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>How signals are scored over time</h2>
+    <div class="body prose">
+      <p>
+        A signal is only meaningful if you can check whether it was real. When a matched market
+        actually settles, the outcome is recorded — including whether both legs resolved to the
+        <em>same</em> real-world result, the strongest possible proof the match was genuine. The
+        <a href="track-record.html">Track record</a> page reports, with sample sizes:
+      </p>
+      <ul>
+        <li><strong>Hit rate</strong> — share of flagged signals whose spread converged
+          (below a locked epsilon of 0.02) before resolution.</li>
+        <li><strong>Days to converge</strong> — median and full distribution.</li>
+        <li><strong>Captured vs. realized</strong> — flagged spread vs. how much actually closed.</li>
+        <li><strong>Match quality</strong> — share of resolved pairs that resolved consistently.</li>
+      </ul>
+      <div class="note">
+        <strong>Honesty principles, baked in:</strong> failed and expired signals are never quietly
+        dropped — they count against the record. Metric definitions are locked <em>before</em> they
+        are measured, scoring never peeks at the resolution to pick the flag point, and small
+        samples are labeled as small, not dressed up as conclusions.
+      </div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>How it runs</h2>
+    <div class="body prose">
+      <p>The system is split so it can run itself for free:</p>
+      <ul>
+        <li><strong>GitHub Actions is the engine</strong> — a scheduled job that does all fetching,
+          matching, ML, database writes, and email. Secrets live only here.</li>
+        <li><strong>This site is the window</strong> — it just displays a static
+          <code>data.json</code> the engine produces. No secrets, no API calls from your browser.</li>
+        <li><strong>Postgres is the memory</strong> — it stores the history the scoring and ML need.</li>
+      </ul>
+      <p class="muted">
+        Because the browser only reads a static file, there's nothing here to attack and nothing to
+        leak.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Informational only — computed signals net of conservative taker fees, not financial advice.
+  Net spread = gross gap − fees on both legs. Acting on a signal is a separate manual decision.
+</footer>
+</body>
+</html>
