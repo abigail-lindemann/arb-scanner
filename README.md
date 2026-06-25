@@ -77,6 +77,28 @@ python tests/test_arb.py          # offline suites; also test_normalize, test_ma
 
 Cost: hosting is free; AI is ~$2–3/month (Haiku, with alignment caching).
 
+## Managing your portfolio
+
+The daily briefing shows P&L and news for whatever holdings are in the
+portfolio table. Use the interactive CLI to manage them:
+
+bashexport DATABASE_URL="postgresql://..."   # your Neon connection string
+python portfolio_manager.py
+
+At the prompt:
+
+portfolio> list                     # show all current holdings
+portfolio> add AAPL 10 150.00       # add 10 shares of AAPL at $150 avg cost
+portfolio> add NVDA 5 420.00        # add another holding
+portfolio> remove AAPL              # remove a holding
+portfolio> quit
+
+
+add is idempotent: running it again on the same ticker updates shares and
+avg cost rather than duplicating the row.
+Holdings never go in the repo — they live only in Neon (§0 rule 2).
+The briefing picks them up automatically on its next run; no restart needed.
+
 ## Human checkpoints (H1–H11)
 
 These need human judgment or action and are marked in code:
