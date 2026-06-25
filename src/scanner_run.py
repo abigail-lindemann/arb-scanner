@@ -21,6 +21,7 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 import os
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
@@ -69,10 +70,38 @@ def build_data_json(events: list[EventRow], generated_at: datetime | None = None
     }
 
 
+def _json_safe(obj):
+    """Recursively replace NaN / Infinity (which are NOT valid JSON and break
+    the browser's JSON.parse) with None. Mirrors the fail-loud philosophy from
+    the one-sided-feed guard: a non-finite float should never silently produce
+    an unparseable file."""
+    if isinstance(obj, float):
+        return obj if math.isfinite(obj) else None
+    if isinstance(obj, dict):
+        return {k: _json_safe(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_json_safe(v) for v in obj]
+    return obj
+
+
 def write_data_json(payload: dict, path: Path = DATA_JSON) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(payload, indent=2))
+    # allow_nan=False is a belt-and-suspenders guard: if any non-finite float
+    # somehow survives _json_safe, dump raises loudly instead of writing a
+    # broken file that fetches with 200 but fails res.json() in the browser.
+    path.write_text(json.dumps(_json_safe(payload), indent=2, allow_nan=False))
     log.info("wrote %s (%s events)", path, payload.get("count"))
+
+
+def _kalshi_volume(row: dict) -> float | None:
+    """Kalshi migrated volume_24h -> volume_24h_fp. Read the new field, fall
+    back to the old one, and never return NaN."""
+    v = row.get("volume_24h_fp")
+    if v is None:
+        v = row.get("volume_24h")
+    if isinstance(v, float) and not math.isfinite(v):
+        return None
+    return v
 
 
 def main() -> None:  # pragma: no cover - live wiring, exercised in Actions
@@ -169,7 +198,7 @@ def main() -> None:  # pragma: no cover - live wiring, exercised in Actions
                 gross_spread=mid_res.gross_spread, net_spread=exec_res.net_spread,
                 est_edge_usd=exec_res.est_edge_usd, confidence=p["confidence"],
                 inverted=p["inverted"], resolution_warning=exec_res.resolution_warning,
-                volume_pm=prow["volume_24h"], volume_kalshi=krow["volume_24h"],
+                volume_pm=prow["volume_24h"], volume_kalshi=_kalshi_volume(krow),
                 end_date=prow["end_date"],
                 link_pm=PM_MARKET_URL + str(p["pm_market_id"]),
                 link_kalshi=KALSHI_MARKET_URL + str(p["kalshi_market_id"]),
