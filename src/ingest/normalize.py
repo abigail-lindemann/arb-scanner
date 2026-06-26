@@ -126,15 +126,35 @@ def normalize_pm_market(market: dict[str, Any]) -> dict[str, Any] | None:
 
 
 def normalize_kalshi_market(market: dict[str, Any]) -> dict[str, Any] | None:
-    """One unified row from a Kalshi market. None if unusable."""
+    """One unified row from a Kalshi market. None if unusable.
+
+    Kalshi's market API has migrated field names over time. We read the
+    current schema with a fallback to the legacy names so a single rename on
+    their side can't silently empty the whole feed:
+
+      price:  yes_bid_dollars / yes_ask_dollars  (decimal strings, e.g. "0.62")
+              fallback: yes_bid / yes_ask         (integer cents, e.g. 62)
+      volume: volume_24h_fp                       (new)
+              fallback: volume_24h                (legacy)
+
+    All raw volume variants collapse into the canonical `volume_24h` column of
+    the unified schema, so no downstream consumer needs to know which raw field
+    Kalshi happened to use.
+    """
     title = market.get("title")
-    yes_bid = market.get("yes_bid_dollars") or market.get("yes_bid")
-    yes_ask = market.get("yes_ask_dollars") or market.get("yes_ask")
+    yes_bid = _kalshi_price(market, "yes_bid_dollars", "yes_bid")
+    yes_ask = _kalshi_price(market, "yes_ask_dollars", "yes_ask")
     if title is None or yes_bid is None or yes_ask is None:
+        log.warning(
+            "Kalshi market dropped (ticker=%s): title=%r yes_bid=%r yes_ask=%r",
+            market.get("ticker"), title,
+            market.get("yes_bid_dollars", market.get("yes_bid")),
+            market.get("yes_ask_dollars", market.get("yes_ask")),
+        )
         return None
-    prob_bid = float(yes_bid)
-    prob_ask = float(yes_ask)
-    prob_mid = (float(yes_bid) + float(yes_ask)) / 2.0
+    prob_bid = yes_bid
+    prob_ask = yes_ask
+    prob_mid = (yes_bid + yes_ask) / 2.0
     raw_cat = market.get("category") or market.get("series_ticker")
     return {
         "platform": "kalshi",
@@ -148,20 +168,42 @@ def normalize_kalshi_market(market: dict[str, Any]) -> dict[str, Any] | None:
         "prob_mid": prob_mid,
         "prob_yes_bid": prob_bid,
         "prob_yes_ask": prob_ask,
-        "volume_24h": _to_float(market.get("volume_24h")),
+        # canonical volume: new field, fall back to legacy, never NaN
+        "volume_24h": _to_float(market.get("volume_24h_fp")
+                                if market.get("volume_24h_fp") is not None
+                                else market.get("volume_24h")),
         # Kalshi has no 'liquidity' field; open interest is the closest proxy.
-        "liquidity": _to_float(market.get("open_interest")),
+        "liquidity": _to_float(market.get("open_interest_fp")
+                               if market.get("open_interest_fp") is not None
+                               else market.get("open_interest")),
         "end_date": market.get("close_time"),
         "status": market.get("status") or "open",
     }
 
 
+def _kalshi_price(market: dict[str, Any], new_key: str, legacy_key: str) -> float | None:
+    """Read a Kalshi price, preferring the new decimal-string field and falling
+    back to the legacy integer-cents field (which must be divided by 100).
+    Returns a probability in 0-1, or None if neither field is usable."""
+    v = market.get(new_key)
+    if v is not None:
+        f = _to_float(v)
+        return f  # already a 0-1 decimal
+    v = market.get(legacy_key)
+    if v is not None:
+        f = _to_float(v)
+        return f / 100.0 if f is not None else None  # cents -> 0-1
+    return None
+
+
 def _to_float(v: Any) -> float | None:
     try:
-        return float(v) if v is not None else None
+        if v is None:
+            return None
+        f = float(v)
+        return f if f == f else None  # drop NaN (NaN != NaN)
     except (TypeError, ValueError):
         return None
-
 
 def build_unified(
     pm_markets: list[dict[str, Any]],
