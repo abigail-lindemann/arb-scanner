@@ -1,5 +1,62 @@
 {
-  "generated_at": "2026-06-26T14:29:31.428032+00:00",
-  "count": 0,
-  "events": []
+  "generated_at": "2026-06-26T17:51:33.951216+00:00",
+  "count": 2,
+  "events": [
+    {
+      "pair_id": 185,
+      "title_pm": "Uruguay vs. Spain: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Spain,no Over 3.5 goals scored,no Over 3.5 goals scored",
+      "category": "fifwc-ury-esp-2026-06-26-more-markets",
+      "pm_mid": 0.445,
+      "kalshi_mid": 0.0745,
+      "pm_bidask": [
+        0.44,
+        0.45
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.149
+      ],
+      "gross_spread": 0.3705,
+      "net_spread": 0.27430407000000007,
+      "est_edge_usd": 27.430407000000006,
+      "confidence": 0.7980107820034026,
+      "inverted": false,
+      "resolution_warning": false,
+      "volume_pm": 67418.88983500002,
+      "volume_kalshi": 0.0,
+      "end_date": "2026-06-27T00:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x343722479ea47f52be588192c9504c99863135c9d9869c9f55e3541913b44d83",
+      "link_kalshi": "https://kalshi.com/markets/KXMVESPORTSMULTIGAMEEXTENDED-S2026E56B66901EF-A113C381C1A",
+      "spread_history": []
+    },
+    {
+      "pair_id": 181,
+      "title_pm": "Norway vs. France: Both Teams to Score",
+      "title_kalshi": "yes Both Teams To Score,yes Both Teams To Score,yes France",
+      "category": "fifwc-nor-fra-2026-06-26-more-markets",
+      "pm_mid": 0.575,
+      "kalshi_mid": 0.1785,
+      "pm_bidask": [
+        0.57,
+        0.58
+      ],
+      "kalshi_bidask": [
+        0.0,
+        0.357
+      ],
+      "gross_spread": 0.39649999999999996,
+      "net_spread": 0.18939222999999997,
+      "est_edge_usd": 18.939223,
+      "confidence": 0.7904727029800416,
+      "inverted": false,
+      "resolution_warning": false,
+      "volume_pm": 818536.187101,
+      "volume_kalshi": 0.0,
+      "end_date": "2026-06-26T19:00:00Z",
+      "link_pm": "https://polymarket.com/event/0x16c22426f651531eff8fc9afe63a25adda692a4cdfb95cc634e98f40618d726c",
+      "link_kalshi": "https://kalshi.com/markets/KXMVECROSSCATEGORY-S2026E190868E60A-71035156570",
+      "spread_history": []
+    }
+  ]
 }
