@@ -164,6 +164,14 @@ def main() -> None:  # pragma: no cover - live wiring, exercised in Actions
         krow = ks_by_id.get(p["kalshi_market_id"])
         if not prow or not krow:
             continue  # one leg not in the current top-300 feed this run
+        # The alignment agent's verdict is authoritative: if Haiku judged these
+        # markets to NOT resolve on the same real-world event, they are not a
+        # tradeable pair regardless of embedding proximity. Skip so they never
+        # reach data.json, snapshots, or the signal log. They stay cached in
+        # matched_pairs (same_event=false) so we don't re-pay Haiku, and the
+        # review surface can still inspect them.
+        if not p.get("same_event", False):
+            continue
         try:
             # executable bid/ask for the actionable view (matched markets only)
             tok = pm_token.get(p["pm_market_id"])
