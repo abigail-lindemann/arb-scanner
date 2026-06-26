@@ -152,6 +152,16 @@ def normalize_kalshi_market(market: dict[str, Any]) -> dict[str, Any] | None:
             market.get("yes_ask_dollars", market.get("yes_ask")),
         )
         return None
+    # No live order book: Kalshi reports yes_bid == yes_ask == 0 for markets
+    # with no quotes on either side (illiquid combos, pre-open). These can't be
+    # priced, so any spread against them is phantom -- just the Polymarket leg
+    # with a zero Kalshi leg. Drop them so they can never be embedded, matched,
+    # scored, or snapshotted. A market priced genuinely near zero still has
+    # yes_ask >= 0.01, so this won't drop real lows.
+    if yes_bid == 0.0 and yes_ask == 0.0:
+        log.info("Kalshi %s dropped: no quotes (yes_bid==yes_ask==0)",
+                 market.get("ticker"))
+        return None
     prob_bid = yes_bid
     prob_ask = yes_ask
     prob_mid = (yes_bid + yes_ask) / 2.0
